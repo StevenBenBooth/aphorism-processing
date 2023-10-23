@@ -225,10 +225,10 @@ def process_Wood(path):
     return cleaned
 
 
-base_path = os.path.join(os.getcwd(), "processing texts", "Wood")
-text_path = os.path.join(base_path, "[Wood] Text.txt")
+BASE_PATH = os.path.join(os.getcwd(), "texts")
+TEXT_PATH = os.path.join(BASE_PATH, "[Wood] Text.txt")
 
-processed = process_Wood(text_path)
+processed = process_Wood(TEXT_PATH)
 
 df = pd.DataFrame(
     processed,
@@ -247,8 +247,8 @@ df.to_csv(
 
 
 ############### Create log and record authorship information ###################
-log_path = os.path.join(base_path, "log.txt")
-author_info_path = os.path.join(base_path, "authors.txt")
+log_path = os.path.join(BASE_PATH, "log.txt")
+author_info_path = os.path.join(BASE_PATH, "authors.txt")
 
 authorset = dict()
 
